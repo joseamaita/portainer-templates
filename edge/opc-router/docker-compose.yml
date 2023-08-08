@@ -1,10 +1,11 @@
 services:
   opc-router:
-    image: opcrouter/runtime:latest
+    image: opcrouter/runtime:4.27.3188.111
     restart: unless-stopped
     ports:
       - 27017:27017
     environment:
+      - TZ=America/Caracas
       - OR_DATABASE_USERNAME=root
       - MONGO_INITDB_ROOT_USERNAME=root
       - OR_DATABASE_PASSWORD=password
